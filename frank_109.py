@@ -1,20 +1,3 @@
-"""
-
-    Nowadays people have low attention spans due to heavy social media usage. 
-Frequent engagement in social media has been associated with memory impairments, 
-particularly affecting transactive memory. I am addressing this challenge by 
-developing an engaging memory enhancement game designed to help individuals 
-expand and sharpen their cognitive abilities. My memory-matching game 
-(U.I. based on the Austin Powers movies) generates a grid of characters, and 
-the user must uncover pairs by selecting cells using row letters and column numbers 
-(coordinate system). The code keeps track of elapsed time (using import time(time library)), 
-displays the game grid (made using functions, list comprehensions, and list mutability), 
-and provides feedback on whether selected pairs match. The game continues until 
-all pairs are matched, and at the end, it records the player's time and compares 
-it to the best times for different difficulty levels, saving the best times in 
-separate text files.
-
-"""
 # Importing the necessary libraries in order to track time and randomize the hidden grid
 import time  
 import random
@@ -37,6 +20,62 @@ def print_tile(tile):
 
         print()
         
+def austins_face():
+    print("                                                 .....                                              ")
+    print("                                    ... ......*+...........                                     ")
+    print("                                       .....:#%%%%%%%%%%%%%%#=..                                    ")
+    print("                                      ...:+#%%%##%%%%%%%%%%@%@%.. .....     .                       ")
+    print("                              .........+####%%%%%%%%%%@%%%%@@@@%................                    ")
+    print("                             ....:+*#%%%%##%%%%%#%%%%%%%@%@@@@@@%%###%%###**....                    ")
+    print("                          ....:##*#%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@%%%%%%%###=.........           ")
+    print("                         ....=###%%%%%%%%%%%%@@@%%%%%%%@@@@@@@@@@@@@@@%%%%%%%%%%##-.... .           ")
+    print("                         ...*#%%%%%%%%%%%%@@@%@%@%%%%%%@@%%@@%@@@@@@@@@%%%%%%%%%%%##*-....          ")
+    print("                      ....:#%%%@%%%%%%%%@%@@%%%%%%%%%%%%@@%@@@@@@@@%@@@@%%%%%%%%%%%%##*=...         ")
+    print("                    ....=%%%%%%%%%%@@@%%%%@%%%%#%%%%%%%%%%%@%@%%%%@%%%%%%%%%%%%%%%%%%###+..         ")
+    print("                  ....*%%%@%%%%%%%%%%%@%%%%%%%#%%#%%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%%%%%###%-...      ")
+    print("                 ...-%%%%%%@@%%%%%%%%%@%%%%%%#%%###%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%####*....    ")
+    print("                 ..-%%##%@@%%@%%%%%%%%%%%#%%%%%%%###%%%%%%%#***##%%%%%%%%%%%%%%%%%%%%########..     ")
+    print("                  .#%%%@@@@%@%%%#%%%###%##%%%%%%%%%%%%%%%##*****########%%%%%%%%%#%%#######%#:..    ")
+    print("                 ..%%%@@@@%%@%%%%#%#####%%%%%%%%%%%%%#%####*+*+*#######%%%%%%%%%##%##%%###%%#=..    ")
+    print("                ..=%@@@@@%%%@%%%%#%#####%%%%%%%%%%%%%%####*+++**#######%%####%%%#####%%%%%#%%-..    ")
+    print("                  #@%@@%%%%%@@%%@%%%%##%%%%%%%%%%%%%%####*+*##*####%#########%%%%#%%%%%%%%%%%-..    ")
+    print("                 .%@%@%%%%%%@@%@@%%%#%%%%%%@%%%%%%%%%####*++**#%%%%%##########%%%#%%%%%%%%%%%%....  ")
+    print("                 .%@%%%%%%#%%@%@%%%%##%%%%%%%%%##%%%####*****#%%%%%####*######%%#%%%%%%@%%%%%%-...  ")
+    print("               ...*%%%%%%%%%%%%@@%%%#%####%%%%##%%%%**#**++*#%%%%%#*****##*#*#%%%%%@%%%%@%%%%%=...  ")
+    print("               ...*%%%%%%%%%%%%%%%%%###***#%%#*#%##**++=====+***+++*#%%%%@%#*#%%%%@%%%%#%%%%%%-...  ")
+    print("               ...#%@%%%%%%%%%%%%%%#*++++=++++===========--=====+*##%%#***#%#%%%%@@%%%###%#%%*....  ")
+    print("             ....*#%%%@%%%%%%%%####***#####**+++===--=========++*###*++++++*#%%%%%%%%%%%%%%%%-..... ")
+    print("             ...-*%%%@@@@%%%%%####*#%%%%%%%####**++========++++*#*#%%%%%@@@@@@@@@@@@%%%%%%%%@#....  ")
+    print("             ...-%%%%@@%%%%%%%####%#***#%%%%*#%##*+++++==++*%@@@@%%%%%%%%%**%@@%@@@@@%%%%%%%%%....  ")
+    print("             ..:%@%%%%%@%%%@@@@@@@@@@%####%%%%%%%@@@%@@%@@@@@%#%%%%%##%%%%%%%#@@%#@@@%%%%%%%%%:...  ")
+    print("             ..+%%%@%%%@%%@@@@@%@@##%%%%%@@@@@%%%%%@@@@@@@@@#***#*+##**%#**%%%@@#%@@@%%%%%@%%:....  ")
+    print("             ..#%%%%@%%%@@%@@%@@@%%%%%%%%+%%%#=#+**%@@+===@@++=*=+%%%%++##***%@@%%%%@@@%%%%%*..  .  ")
+    print("             ..#%%%%@@%%@@%@@@%%@%%#**##**%@@%++*++*@+===++@#+=++********++++*@%%%%%%%%%%%%%....    ")
+    print("             ..+%%%@@@@%@@@@@@%%%@*+++*#*****++++++@#+====+*@#+++*******+++++@%#*#%##%%%%%%=..      ")
+    print("             ..:%@%@@@@@@@@@@@%%%@%++++*******+++=%%*+====+**%@+=+++++++=++%@%#***#%%#%%%%:.        ")
+    print("             ...-%%@@%@@@@@@@%%#%#%%++++++++++==#@#**+===++****%@@@@@@@@@@##%%+***%%##%%%+....      ")
+    print("              ...:%%@%@@@@@@@%#*#%#*##%%%%%@@@@%*++**+===++***++====++++++*++++**#%%#####-.         ")
+    print("               ....#@@@%@@%%%%#****#####***+====+++**+===+++*++++====++++++++++**#%%%###:..         ")
+    print("                  ...%#%@@%%%%##***++++++++==+++++**+++===++**++*+++++++++++++**###%%%*...          ")
+    print("                    ....*%#%%%##*****++++++++*++**********######*++**+++++++****#####%-..           ")
+    print("                      ...#*#%%##******++++++**++*#%%%@%###%%##*+++++***++++*****##%%%+...           ")
+    print("                     .....#######*******++****++++++**#%%#++*++++++************###%%:...            ")
+    print("                     ... ..%%%%##**************++++++++++++++++++++************####:.               ")
+    print("                     ... ...#%###***************+++++++++++++++++*************##**#..               ")
+    print("                          ....=%##***************######****##*******#*******######*..               ")
+    print("                             ..=##***********##%%#+#==+=+*-=++*%%%%%#******##*####-..               ")
+    print("                             ..-%##*********#%@@@%+#+++==+==+++%%@@###****##*#####...               ")
+    print("                               ..###***********#%@@@@@@@@@@@@@@#%##*++*+**#**####*..                ")
+    print("                              ...-###******+++**##**===+===++==*###*+*+**#***###*....               ")
+    print("                               ...=###******+++*****=+=+=+=++****##**++*#***#%%#:..                 ")
+    print("                               .....###***#**++****************###***+**#**#%%#+.                   ")
+    print("                                   ..%##**********#####**#####%%#***++*#**#%%%=.                    ")
+    print("                                   ...:##************########****++++*##*#%@=...                    ")
+    print("                                    ....-##******++++*++*++++++++++**####%@*..                      ")
+    print("                                       ...#####**+*++++++++++++*****%%%%%:....                      ")
+    print("                                        ...*####******************#@%@*.....                        ")
+    print("                                         ....+####*************##%@@+..      ")
+
 # Function to get the row letter from the user
 def get_row_letter(choice):
     while True:
@@ -81,12 +120,12 @@ def get_column_number(choice):
             print(f'Please enter a valid number from 1-{tile_size}.\n')
             
 # Welcome message and instructions for the game
+austins_face()
 print("Welcome to Austin Powers' (UNOFFICIAL) Groovy Memory Game!\nEmbark on a shagadelic journey to master the art of concentration and memory skills in this swinging matching game, designed to train future International Men of Mystery.")
 print("\nObjective:\nIn Austin's Groovy Memory Game, your goal is to uncover pairs of characters within a hip grid. Match these pairs while sharpening your mojo-filled memory.")
 print("\nGameplay:\nIdentify two cells by specifying their row letter and column number (e.g., Select cell A2).\nIf the cells match (i.e., they have the same mojo), keep the pair and take another turn.")
 print("If the cells don't match, concentrate, remember the characters' placements, and choose another set of cells to continue your groovy training.")
 print("The game progresses until all pairs of characters are successfully matched.\n")
-
 # Section for the user to choose the level of difficulty
 while True:
     try:
