@@ -6,6 +6,16 @@
 ## Overview
 Welcome to Austin Powers' (UNOFFICIAL) Groovy Memory Game! This Python-based memory game challenges players to match pairs of hidden tiles on a grid. Featuring Austin Powers-inspired humor and flair, this game is a shagadelic way to test your memory and concentration skills while delivering potential cognitive benefits.
 
+1. [Assignment Explanation](#assignment-explanation)
+2. [Objective](#objective)
+3. [Gameplay](#gameplay)
+4. [Features](#features)
+5. [Installation](#installation)
+6. [How to Play](#how-to-play)
+7. [Files](#files)
+8. [Notes](#notes)
+9. [Acknowledgments](#acknowledgments)
+
 ## Assignment Explanation
 In today's world, heavy social media usage is associated with reduced attention spans and memory impairments, particularly affecting transactive memory. This project addresses these challenges by offering an engaging memory enhancement game designed to help individuals sharpen their cognitive abilities.
 
